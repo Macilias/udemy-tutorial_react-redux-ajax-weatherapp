@@ -21,7 +21,7 @@ export default (props) => {
 				<SparklinesLine color={props.color} />
 				<SparklinesReferenceLine type="avg" />
 			</Sparklines>
-			<div>Avg {average(props.data)} {props.units} | Max {max(props.data)} {props.units} | Min {min(props.data)} {props.units}</div>
+			<div>Avg {average(props.data)}{props.units} | Max {max(props.data)}{props.units} | Min {min(props.data)}{props.units}</div>
 		</div>
 	);
 }
