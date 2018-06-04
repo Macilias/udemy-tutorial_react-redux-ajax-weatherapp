@@ -6,6 +6,14 @@ function average(data) {
 	return _.round(_.sum(data)/data.length);
 }
 
+function max(data) {
+	return _.round(_.max(data));
+}
+
+function min(data) {
+	return _.round(_.min(data));
+}
+
 export default (props) => {
 	return(
 		<div>
@@ -13,7 +21,7 @@ export default (props) => {
 				<SparklinesLine color={props.color} />
 				<SparklinesReferenceLine type="avg" />
 			</Sparklines>
-			<div>{average(props.data)} {props.units}</div>
+			<div>Avg: {average(props.data)} Max: {max(props.data)} Min: {min(props.data)} {props.units}</div>
 		</div>
 	);
 }
